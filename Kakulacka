@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jednoduchá kalkulačka</title>
+</head>
+<body>
+
+<h1>Jednoduchá kalkulačka</h1>
+
+<div>
+  <label for="cislo1">Číslo 1:</label>
+  <input type="number" id="cislo1">
+</div>
+
+<div>
+  <label for="cislo2">Číslo 2:</label>
+  <input type="number" id="cislo2">
+</div>
+
+<div>
+  <button onclick="secti()">Sčítání</button>
+  <button onclick="odecti()">Odčítání</button>
+  <button onclick="vynasob()">Násobení</button>
+  <button onclick="vydel()">Dělení</button>
+</div>
+
+<div>
+  <p>Výsledek: <span id="vysledek"></span></p>
+</div>
+
+<script>
+  function secti() {
+    var cislo1 = parseFloat(document.getElementById('cislo1').value);
+    var cislo2 = parseFloat(document.getElementById('cislo2').value);
+    var vysledek = cislo1 + cislo2;
+    document.getElementById('vysledek').innerText = vysledek;
+  }
+
+  function odecti() {
+    var cislo1 = parseFloat(document.getElementById('cislo1').value);
+    var cislo2 = parseFloat(document.getElementById('cislo2').value);
+    var vysledek = cislo1 - cislo2;
+    document.getElementById('vysledek').innerText = vysledek;
+  }
+
+  function vynasob() {
+    var cislo1 = parseFloat(document.getElementById('cislo1').value);
+    var cislo2 = parseFloat(document.getElementById('cislo2').value);
+    var vysledek = cislo1 * cislo2;
+    document.getElementById('vysledek').innerText = vysledek;
+  }
+
+  function vydel() {
+    var cislo1 = parseFloat(document.getElementById('cislo1').value);
+    var cislo2 = parseFloat(document.getElementById('cislo2').value);
+    if (cislo2 === 0) {
+      document.getElementById('vysledek').innerText = 'Nelze dělit nulou';
+    } else {
+      var vysledek = cislo1 / cislo2;
+      document.getElementById('vysledek').innerText = vysledek;
+    }
+  }
+</script>
+
+</body>
+</html>
