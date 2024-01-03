@@ -1,0 +1,53 @@
+Součet:
+function secti(a, b) {
+  return a + b;
+}
+
+Rozdíl:
+function odecti(a, b) {
+  return a - b;
+}
+
+Násobení:
+function vynasob(a, b) {
+  return a * b;
+}
+
+Dělení:
+function vydel(a, b) {
+  if (b === 0) {
+    return 'Nelze dělit nulou';
+  } else {
+    return a / b;
+  }
+}
+
+Mocnina:
+function mocnina(a, b) {
+  return Math.pow(a, b);
+}
+
+Odmocnina:
+function odmocnina(a) {
+  return Math.sqrt(a);
+}
+
+Zbytek po dělení:
+function zbytekPoDeleni(a, b) {
+  return a % b;
+}
+
+Inverzní hodnota:
+function inverz(a) {
+  return 1 / a;
+}
+
+Absolutní hodnota:
+function absolutniHodnota(a) {
+  return Math.abs(a);
+}
+
+Změna znaménka:
+function zmenZnamenko(a) {
+  return -a;
+}
